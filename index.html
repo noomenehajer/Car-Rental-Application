@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>location de voitures |BMW RENT</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/bmw.png">
+
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar"></div>
+
+      <div class="cart" >({{ cart.length }})</div>
+
+      <product-display  :premium="premium" 
+                        @add-to-cart="updateCart"
+                        @remove-from-cart="removeById"                  
+      ></product-display>
+    </div>
+
+    
+
+    <!-- Import Js --> 
+    <script src="js/main.js"></script>
+
+    <!-- Import Components --> 
+    <script src="./components/productDisplay.js"></script>
+    <script src="./components/reviewForm.js"></script>
+    <script src="./components/reviewList.js"></script>
+
+    <!--  Mount app-->
+    <script>
+      const mountedApp = app.mount("#app");
+    </script>
+  </body>
+  <footer>
+    <div class="footer">
+      <p id="p" >© 2021 All Rights Reserved, by Hajer Noomene</p>
+    </div>
+ </footer>
+</html>
+
+
+
+
